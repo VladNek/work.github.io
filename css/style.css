@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/AnyConv.com__Montserrat-Light.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap;
+}
+@font-face {
+  font-family: "Avenir Next Cyr Light";
+  src: url("../fonts/AvenirNextCyr-Light.woff") format("woff"), url("../fonts/AnyConv.com__AvenirNextCyr-Light.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap;
+}
+.button {
+  width: 180px;
+  height: 48px;
+  border-radius: 30px;
+  cursor: pointer;
+  color: rgb(109, 49, 208);
+  background-color: rgb(255, 219, 128);
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+}
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(90.49deg, #53269D 0%, #6D31D0 100.2%);
+  padding: 20px 100px;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  overflow: hidden;
+}
+
+.menu a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px;
+  float: left;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 5px 10px;
+  background-color: inherit;
+  font-family: "Avenir Next Cyr Light", sans-serif;
+  margin: 0;
+}
+
+.dropbtn {
+  display: inline-block;
+  position: relative;
+}
+.dropbtn::after {
+  position: absolute;
+  content: "111";
+  background: url("../img/vector.svg") no-repeat center;
+  display: block;
+  height: 5px;
+  margin-top: -10px;
+  transition: 0.5s;
+  cursor: pointer;
+  transform: translateX(185%);
+}
+.dropbtn::after:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 1199px) {
+  .menu a {
+    display: flex;
+    flex-direction: column;
+  }
+  .button {
+    text-align: left;
+  }
+}
+body {
+  width: 1440px;
+  font-family: "Avenir Next Cyr Light";
+  font-size: 16px;
+}

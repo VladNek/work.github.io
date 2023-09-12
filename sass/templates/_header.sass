@@ -1,0 +1,74 @@
+.header
+ position: fixed
+ width: 100%
+ left: 0
+ top: 0
+ background: linear-gradient(90.49deg, #53269D 0%, #6D31D0 100.2%)
+ padding: 20px 100px
+ &__wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+.menu
+ overflow: hidden
+.menu a 
+ color: #fff
+ text-transform: uppercase
+ text-decoration: none
+ padding: 5px
+ float: left
+.dropdown 
+ float: left
+ overflow: hidden
+
+.dropdown .dropbtn 
+ font-size: 16px
+ border: none
+ outline: none
+ color: white
+ padding: 5px 10px
+ background-color: inherit
+ font-family: 'Avenir Next Cyr Light' , sans-serif
+ margin: 0
+
+.dropbtn
+ display: inline-block
+ position: relative
+ &::after
+  position: absolute
+  content: '111'
+  background: url('../img/vector.svg') no-repeat center
+  display: block
+  height: 5px
+  margin-top: -10px
+  transition: 0.5s
+  cursor: pointer
+  transform: translateX(185%)
+  &:hover
+    &::after
+      width: 100%
+
+.navbar a:hover, .dropdown:hover .dropbtn 
+  background-color: red
+
+.dropdown-content 
+ display: none
+ position: absolute
+ background-color: #f9f9f9
+ min-width: 160px
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+ z-index: 1
+
+.dropdown-content a
+ float: none
+ color: black
+ padding: 12px 16px
+ text-decoration: none
+ display: block
+ text-align: left
+
+.dropdown-content a:hover 
+ background-color: #ddd
+
+.dropdown:hover .dropdown-content 
+ display: block
