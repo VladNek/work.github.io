@@ -15,6 +15,7 @@
  left: 0
  top: 0
  z-index: 50
+ transition: all .3s ease-in-out
  &::before
   content: ''
   position: absolute
@@ -34,16 +35,15 @@
   overflow: hidden
   position: relative
   z-index: 3
- 
  &__burger
   display: none
   padding: auto
  &__menu
   display: flex
   align-items: center
+  cursor: pointer
  &__list
   display: flex
-  // padding: 0 71px
  &__link
   color: #fff
   text-decoration: none
@@ -54,9 +54,43 @@
 .header__list li
  list-style: none
  margin: 0px 0px 0px 20px
-
+.header__item 
+ position: relative
+ z-index: 2
+ &::before
+  position: absolute
+  content:''
+  left: 50%
+  display: block
+  transform: translateX(-50%)
+  bottom: -5px
+  height: 1px
+  background: #fff
+  transition: all .5s 
+  width: 100%
+  cursor: pointer
+  z-index: 5
+  &:hover
+   &::after
+     width: 100%
+.sub-header-catalog
+ position: relative
+ &::after
+  content: ''
+  position: absolute
+  top: 6px
+  right: 0
+  transform: translateX(100%)
+  width: 15px
+  height: 6px
+  background: url('../img/vector.svg') no-repeat center
+  transition: all .3s ease 0s
+  z-index: 6
 .header__logo img 
- // max-width: 100%
+ max-width: 100%
+
+
+
 
 
 // .menu
