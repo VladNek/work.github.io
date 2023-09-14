@@ -54,6 +54,7 @@
   top: 0;
   z-index: 50;
   transition: all 0.3s ease-in-out;
+  z-index: 2;
 }
 .header::before {
   content: "";
@@ -88,6 +89,7 @@
 }
 .header__list {
   display: flex;
+  margin: 0px 10px 0px 0px;
 }
 .header__link {
   color: #fff;
@@ -97,6 +99,52 @@
 }
 .header__button {
   padding: 0 71px;
+  z-index: 3;
+}
+.header__item {
+  position: relative;
+  text-decoration: none;
+  z-index: 3;
+}
+.header__item::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  margin-top: 14px;
+  background: #fff;
+  transition: 0.5s;
+  width: 0%;
+  cursor: pointer;
+}
+.header__item::before:hover::after {
+  width: 100%;
+}
+.header a {
+  text-decoration: none;
+}
+.header li {
+  position: relative;
+}
+.header a.parent {
+  margin: 0px 3px 0px 0px;
+}
+
+.sub-header__list {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  padding: 5px 0px 0px 0px;
+  width: 280px;
+  height: 82px;
+}
+.sub-header__list li {
+  background-color: #fff;
+}
+
+.sub-header__link {
+  color: #000;
+  display: inline-block;
+  padding: 5px 10px;
 }
 
 .header__list li {
@@ -104,42 +152,34 @@
   margin: 0px 0px 0px 20px;
 }
 
-.header__item {
-  position: relative;
-  z-index: 2;
-}
-.header__item::before {
-  position: absolute;
-  content: "";
-  left: 50%;
+.header__list > li:hover .sub-header__list {
   display: block;
-  transform: translateX(-50%);
-  bottom: -5px;
-  height: 1px;
-  background: #fff;
-  transition: all 0.5s;
-  width: 100%;
-  cursor: pointer;
-  z-index: 5;
-}
-.header__item::before:hover::after {
-  width: 100%;
 }
 
-.sub-header-catalog {
-  position: relative;
+body.mouse.sub-header__list > li:hover.sub-menu__list {
+  display: block;
 }
-.sub-header-catalog::after {
-  content: "";
+
+body.mouse.sub-header__list > li:hover.sub-menu__list {
+  display: block;
+}
+
+.sub-header__list.open {
+  display: block;
+}
+
+.arrow {
   position: absolute;
-  top: 6px;
-  right: 0;
-  transform: translateX(100%);
-  width: 15px;
-  height: 6px;
-  background: url("../img/vector.svg") no-repeat center;
-  transition: all 0.3s ease 0s;
-  z-index: 6;
+  top: 8px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid #fff;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.arrow.active {
+  transform: rotate(-180deg);
 }
 
 .header__logo img {
@@ -159,7 +199,7 @@
     height: 20px;
     position: relative;
     z-index: 3;
-    padding: 0 50px;
+    padding: 0 30px;
   }
   .header__burger::after {
     content: "";
@@ -192,7 +232,7 @@
   }
   .header__menu {
     position: fixed;
-    top: -120%;
+    top: -150%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -234,6 +274,19 @@
   }
   .header__wraper {
     height: 80px;
+  }
+  .wrapper {
+    padding: 30px;
+  }
+  .arrow {
+    border-top: 5px solid #000;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
+  .sub-header__list {
+    position: relative;
+    left: 0;
+    top: 0;
   }
 }
 body {
