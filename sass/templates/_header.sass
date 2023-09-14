@@ -45,7 +45,7 @@
   cursor: pointer
  &__list
   display: flex
-  margin: 0px 10px 0px 0px
+  margin: 0px 20px 0px 0px
  
  &__link
   color: #fff
@@ -86,7 +86,7 @@
  position: absolute
  left: 0
  top: 20px
- // display: none
+ display: none
  padding: 5px 0px 0px 0px
  width: 280px
  height: 82px
@@ -99,15 +99,17 @@
 .header__list li
  list-style: none
  margin: 0px 0px 0px 20px
+.header__list .sub-header__list li
+ margin-left: 0
 
 .header__list>li:hover .sub-header__list
  display: block
 
-body.mouse.sub-header__list>li:hover.sub-menu__list
+body.mouse .header__list>li:hover .sub-header__list
  display: block
-body.mouse.sub-header__list>li:hover.sub-menu__list
+body.mouse .sub-header__list>li:hover .sub-header__list
  display: block
-.sub-header__list.open
+body.touch .sub-header__list.open
  display: block
 
 .arrow
