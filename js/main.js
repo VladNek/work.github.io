@@ -150,14 +150,14 @@ if(isMobile.any()){
 		let arrow=document.querySelectorAll('.arrow');
  for(i=0; i<arrow.length; i++){
 			let thisLink=arrow[i].previousElementSibling;
-			let subHeader=arrow[i].nextElementSibling;
+			let subheader=arrow[i].nextElementSibling;
 			let thisArrow=arrow[i];
 			thisLink.classList.add('parent');
 	  arrow[i].addEventListener('click', function(){
-			subHeader.classList.toggle('open');
+			subheader.classList.toggle('open');
 			thisArrow.classList.toggle('active');
 		});
 	}
 }else{
-	body.classList.add('mouse');
+	 body.classList.add('mouse');
 }

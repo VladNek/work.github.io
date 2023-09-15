@@ -40,20 +40,8 @@
   width: 100%;
   left: 0;
   top: 0;
-  background: linear-gradient(90.49deg, #53269D 0%, #6D31D0 100.2%);
-}
-.header__wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.header {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 50;
   transition: all 0.3s ease-in-out;
+  background: linear-gradient(90.49deg, #53269D 0%, #6D31D0 100.2%);
   z-index: 2;
 }
 .header::before {
@@ -98,7 +86,6 @@
   text-transform: uppercase;
 }
 .header__button {
-  padding: 0 71px;
   z-index: 3;
 }
 .header__item {
@@ -126,7 +113,7 @@
   position: relative;
 }
 .header a.parent {
-  margin: 0px 3px 0px 0px;
+  margin: 0px 4px 0px 0px;
 }
 
 .sub-header__list {
@@ -138,6 +125,7 @@
   width: 280px;
   height: 82px;
 }
+
 .sub-header__list li {
   background-color: #fff;
 }
@@ -150,7 +138,7 @@
 
 .header__list li {
   list-style: none;
-  margin: 0px 0px 0px 20px;
+  margin: 0px 12px 0px 20px;
 }
 
 .header__list .sub-header__list li {
@@ -175,20 +163,17 @@ body.touch .sub-header__list.open {
 
 .arrow {
   position: absolute;
-  top: 8px;
-  width: 0;
-  height: 0;
-  border-top: 5px solid #fff;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
+  top: 6px;
+  width: 5px;
+  height: 5px;
+  transform: rotate(135deg);
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  margin-right: 15px;
 }
 
 .arrow.active {
-  transform: rotate(-180deg);
-}
-
-.header__logo img {
-  max-width: 100%;
+  transform: rotate(315deg);
 }
 
 @media (max-width: 1200px) {
@@ -281,9 +266,14 @@ body.touch .sub-header__list.open {
     padding: 30px;
   }
   .arrow {
-    border-top: 5px solid #000;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
+    position: absolute;
+    top: 6px;
+    width: 5px;
+    height: 5px;
+    transform: rotate(135deg);
+    border-top: 1px solid #000;
+    border-right: 1px solid;
+    margin-right: 15px;
   }
   .sub-header__list {
     position: relative;
@@ -293,11 +283,15 @@ body.touch .sub-header__list.open {
     height: 100%;
     font-family: 18px;
   }
+  .sub-header__list li {
+    background: none;
+  }
   .header__button {
-    padding: 30px;
+    padding: 100px;
   }
 }
 body {
   font-family: "Avenir Next Cyr Light";
   font-size: 16px;
+  margin: 0px;
 }
