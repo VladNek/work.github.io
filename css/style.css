@@ -348,8 +348,115 @@ template {
   max-width: 1220px;
 }
 
+.card__list {
+  display: flex;
+  text-transform: uppercase;
+  list-style: none;
+  padding: 0;
+  gap: 24px;
+  width: 664px;
+}
+
+.card__item {
+  position: relative;
+  background-color: rgba(109, 49, 208, 0.5);
+  border-radius: 10px;
+  color: rgb(255, 219, 128);
+  font-size: 16px;
+  width: 100%;
+  height: 18px;
+  text-align: center;
+  display: block;
+}
+.card__item::before {
+  content: "";
+  border-left: 2px solid #fff;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  transform: translateX(-700%);
+}
+
+.swiper-slide__text p {
+  width: 520px;
+  height: 120px;
+  line-height: 24px;
+}
+
+.col-cities {
+  margin-top: 50px;
+}
+
+.image-slider__image {
+  text-align: center;
+}
+
+.image-slider__image img {
+  width: 100%;
+}
+
+.swiper-pagination {
+  padding: 30px;
+  min-width: 0;
+}
+
+.image-slider {
+  height: 1000px;
+}
+
+.image-slider .swiper-pagination {
+  bottom: center;
+}
+
+.image-slider .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  gap: 12px;
+  background-color: rgb(255, 255, 255);
+}
+
+.swiper-slide__text {
+  position: absolute;
+  padding-top: 130px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.swiper-slide__text p {
+  color: #fff;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+.swiper-slide__text h1 {
+  color: #fff;
+  font-family: "Montserrat Light";
+  font-size: 40px;
+  line-height: 32px;
+}
+.swiper-slide__text h2 {
+  color: #fff;
+  font-family: "Montserrat Light";
+  font-size: 22px;
+  line-height: 40px;
+}
+.swiper-slide__text button {
+  margin-top: 23px;
+  cursor: pointer;
+}
+
+.col-cities {
+  color: #fff;
+  font-family: "Montserrat Light";
+  font-size: 20px;
+  line-height: 32px;
+}
+.col-cities img {
+  border-radius: 10px;
+}
+
 .header {
-  position: fixed;
   width: 100%;
   left: 0;
   top: 0;
