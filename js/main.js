@@ -162,12 +162,13 @@ if(isMobile.any()){
 	 body.classList.add('mouse');
 }
 
- new Swiper('.image-slider ',{
+new Swiper ('.image-slider',{
   pagination: {
    el: '.swiper-pagination',
    clickable: true,
-   dynamicBullets: true,
-			spaceBetween: 30,
+   // dynamicBullets: true,
+			// spaceBetween: 30,
+
   },
 		direction: 'vertical',
 
