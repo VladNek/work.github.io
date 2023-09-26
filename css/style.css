@@ -340,23 +340,27 @@ template {
 
 .container {
   max-width: 1180px;
-  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
 .container-header {
   max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .firstblock {
-  height: 700px;
+  height: 840px;
 }
 
 .card__list {
   display: flex;
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   list-style: none;
-  padding: 0;
+  padding: 0px;
   gap: 24px;
   width: 664px;
 }
@@ -465,6 +469,11 @@ template {
   color: #fff;
 }
 
+.swiper-horizontal > .swiper-pagination-bullets {
+  width: 140px;
+  height: 20px;
+}
+
 .swiper-text__black {
   padding-bottom: 30px;
 }
@@ -535,7 +544,7 @@ template {
   background-color: linear-gradient(90.49deg, #53269D 0%, #6D31D0 100.2%);
   z-index: 2;
 }
-.header__wraper {
+.header__wrapper {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -572,6 +581,7 @@ template {
 }
 .header__button {
   z-index: 3;
+  padding-bottom: 5px;
 }
 .header__item {
   position: relative;
@@ -737,8 +747,10 @@ body.touch .sub-header__list.open {
     text-align: center;
     margin: auto;
     padding: 0 30px;
-    width: 200px;
-    height: 260px;
+    width: 150px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 10px;
   }
   .header__list li {
     margin: 0px 0px 20px 0px;
@@ -760,12 +772,12 @@ body.touch .sub-header__list.open {
   .header__burger.active span {
     transform: scale(0);
   }
-  .header__wraper {
+  .header__wrapper {
     height: 120px;
     margin-left: 70px;
   }
   .wrapper {
-    padding: 30px;
+    overflow: auto;
   }
   .arrow {
     position: absolute;
@@ -814,7 +826,83 @@ body.touch .sub-header__list.open {
     width: 100%;
   }
 }
+@media (max-width: 768px) {
+  .card__list {
+    flex-wrap: wrap;
+    width: 450px;
+    padding: 0px 20px;
+  }
+  .card__list h1 {
+    margin: 0;
+  }
+  .card__list h2 {
+    margin: 0;
+  }
+  .swiper-slide__text {
+    text-align: center;
+    padding: 30px 0px;
+  }
+  .swiper-slide__text p {
+    width: 468px;
+  }
+  .features-block {
+    flex-wrap: wrap;
+    text-align: left;
+    padding: 0px;
+    width: 400px;
+    height: 100px;
+    gap: 20px;
+  }
+  .features-block h2 {
+    text-align: center;
+  }
+  .image span {
+    width: 100px;
+    height: 135px;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets {
+    width: 140px;
+    height: 20px;
+    padding: 100px 220px;
+    margin: 30px 30px;
+  }
+}
 @media (max-width: 480px) {
+  .header__logo {
+    width: 100px;
+    height: 80px;
+  }
+  .header__burger {
+    display: block;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 3;
+    padding: 0 40px;
+  }
+  .header__burger::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 40px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 40px;
+    height: 2px;
+    left: 0;
+    top: 0;
+    z-index: 3;
+  }
+  .firstblock {
+    height: 840px;
+  }
   .swiper-slide__text {
     width: 400px;
     font-size: 16px;
@@ -826,6 +914,7 @@ body.touch .sub-header__list.open {
   .card__list {
     flex-wrap: wrap;
     width: 378px;
+    padding: 0px 20px;
   }
   .card__list h1 {
     margin: 0;
@@ -833,19 +922,26 @@ body.touch .sub-header__list.open {
   .card__list h2 {
     margin: 0;
   }
-  .features-block {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: left;
-    padding: 0px;
-  }
   .swiper-slide__text p {
     width: 365px;
     height: 136px;
     padding-bottom: 30px;
   }
-  .button {
-    padding-bottom: 10px;
+  .button__wraper {
+    padding-left: 20px;
+  }
+  .header__wraper {
+    margin-left: 0px;
+  }
+  .image span {
+    width: 100px;
+    height: 135px;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets {
+    width: 140px;
+    height: 20px;
+    padding: 50px 140px;
+    margin: 30px 30px;
   }
 }
 body {
