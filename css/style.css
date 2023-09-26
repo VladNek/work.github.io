@@ -350,8 +350,89 @@ template {
   padding: 0 20px;
 }
 
+.section__card {
+  background: linear-gradient(180deg, #828CDE -21.43%, #6D31D0 201.93%);
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+}
+
+.row {
+  display: flex;
+}
+
+.section-title {
+  font-size: 26px;
+  line-height: 40px;
+  margin-bottom: 60px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-align: center;
+}
+.section-title-heading {
+  width: 380px;
+  position: relative;
+  display: inline-block;
+}
+.section-title-heading::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 4px;
+  margin-top: 15px;
+  background: rgb(253, 191, 163);
+  width: 100%;
+}
+
+.col {
+  flex-basis: 30%;
+  padding: 0px 20px;
+  height: 515px;
+}
+
+.types__card {
+  position: relative;
+}
+.types__card img {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.card__text {
+  background-color: #fff;
+  text-align: center;
+  max-width: 380px;
+  margin-right: 0;
+  margin-top: -35px;
+  height: 255px;
+  border-radius: 0px 0px 20px 20px;
+}
+.card__text h3 {
+  padding-top: 20px;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(67, 67, 100);
+}
+.card__text p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  width: 320px;
+  padding: 0px 20px;
+  color: rgb(67, 67, 100);
+  margin-bottom: 20px;
+}
+
 .firstblock {
   height: 840px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
 }
 
 .card__list {
