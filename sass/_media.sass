@@ -1,6 +1,7 @@
-@media ( max-width: 1100px )
+@media ( max-width: 1200px )
  .menu 
   display: none 
+  width: 1000px
  .header__burger
   display: block
   width: 30px
@@ -59,8 +60,10 @@
  .header__list li
   margin: 0px 0px 20px 0px
   display: block
+  font-size: 10px
  .header__link
   color: #000
+  font-size: 14px
  .header__burger.active
   &::before
    transform: rotate(45deg)
@@ -116,3 +119,22 @@
   &:hover
    &::before
      width: 100%
+
+ .swiper-slide__text
+  // margin-left: 90px 
+@media ( max-width: 768px )
+
+
+@media ( max-width: 480px )
+ .swiper-slide__text
+   width: 400px
+   font-size: 16px
+   height: 400px
+   text-align: center
+   gap: 30px
+ .card__list 
+   width: 378px
+   height: 20px
+ .features-block
+   text-align: left
+    

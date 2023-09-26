@@ -162,14 +162,35 @@ if(isMobile.any()){
 	 body.classList.add('mouse');
 }
 
-new Swiper ('.image-slider',{
-  pagination: {
-   el: '.swiper-pagination',
-   clickable: true,
-   // dynamicBullets: true,
-			// spaceBetween: 30,
+// new Swiper ('.image-slider',{
+//   pagination: {
+//    el: '.swiper-pagination',
+//    clickable: true,
+//    // dynamicBullets: true,
+// 			// spaceBetween: 30,
 
-  },
-		direction: 'vertical',
+//   },
+// 		direction: 'vertical',
 
- });
+//  });
+
+var swiper = new Swiper(".image-slider", {
+	direction: "vertical",
+	pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+			slidesPerView: 'auto'
+	},
+	keyboard:{
+		enabled: true,
+		onliInViewport: true,
+		pageUpDown: true
+	},
+	mousewheel:{
+		sensitivity: 1,
+	},
+	whatchOverflow: true,
+
+	speed: 800,
+});
+ 
