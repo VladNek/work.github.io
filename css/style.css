@@ -367,7 +367,7 @@ template {
   border-radius: 10px;
   color: rgb(255, 219, 128);
   font-size: 16px;
-  width: 100%;
+  width: 50%;
   height: 18px;
   text-align: center;
   display: block;
@@ -380,6 +380,39 @@ template {
   left: 0;
   top: 25%;
   transform: translateX(-700%);
+}
+
+.card__item-black {
+  position: relative;
+  background-color: rgba(109, 49, 208, 0.5);
+  border-radius: 10px;
+  color: rgb(255, 219, 128);
+  font-size: 16px;
+  width: 50%;
+  height: 18px;
+  text-align: center;
+  display: block;
+}
+.card__item-black::before {
+  content: "";
+  border-left: 2px solid #000;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  transform: translateX(-700%);
+}
+
+.card__iten {
+  position: relative;
+  background-color: rgba(109, 49, 208, 0.5);
+  border-radius: 10px;
+  color: rgb(255, 219, 128);
+  font-size: 16px;
+  width: 35%;
+  height: 18px;
+  text-align: center;
+  display: block;
 }
 
 .swiper-slide__text p {
@@ -412,6 +445,7 @@ template {
 .image-slider {
   height: 900px;
   width: 100%;
+  overflow: hidden;
 }
 
 .swiper-pagination {
@@ -431,6 +465,9 @@ template {
   color: #fff;
 }
 
+.swiper-text__black {
+  padding-bottom: 30px;
+}
 .swiper-text__black h1 {
   color: rgb(67, 67, 100);
 }
@@ -460,6 +497,7 @@ template {
   display: flex;
   justify-content: space-around;
   gap: 40px;
+  flex-wrap: wrap;
 }
 .image img {
   border-radius: 10px;
@@ -783,13 +821,31 @@ body.touch .sub-header__list.open {
     height: 400px;
     text-align: center;
     gap: 30px;
+    padding: 40px 10px;
   }
   .card__list {
+    flex-wrap: wrap;
     width: 378px;
-    height: 20px;
+  }
+  .card__list h1 {
+    margin: 0;
+  }
+  .card__list h2 {
+    margin: 0;
   }
   .features-block {
+    display: flex;
+    flex-wrap: wrap;
     text-align: left;
+    padding: 0px;
+  }
+  .swiper-slide__text p {
+    width: 365px;
+    height: 136px;
+    padding-bottom: 30px;
+  }
+  .button {
+    padding-bottom: 10px;
   }
 }
 body {

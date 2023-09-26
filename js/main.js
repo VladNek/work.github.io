@@ -179,7 +179,7 @@ var swiper = new Swiper(".image-slider", {
 	pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
-			slidesPerView: 'auto'
+			slidesPerView: 1,
 	},
 	keyboard:{
 		enabled: true,
@@ -192,5 +192,13 @@ var swiper = new Swiper(".image-slider", {
 	whatchOverflow: true,
 
 	speed: 800,
+	breakpoints: { // условия для разных размеров окна браузера
+		0: { // при 0px и выше
+			direction: 'horizontal', // горизонтальная прокрутка
+		},
+		768: { // при 768px и выше
+			direction: 'vertical', // вертикальная прокрутка
+		}
+	},
 });
  

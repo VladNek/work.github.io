@@ -13,7 +13,7 @@
  border-radius: 10px
  color: rgba(255, 219, 128, 1)
  font-size: 16px
- width: 100%
+ width: 50%
  height: 18px
  text-align: center
  display: block
@@ -25,6 +25,34 @@
   left: 0
   top: 25%
   transform: translateX(-700%)
+.card__item-black
+ position: relative
+ background-color: rgba(109, 49, 208, 0.5)
+ border-radius: 10px
+ color: rgba(255, 219, 128, 1)
+ font-size: 16px
+ width: 50%
+ height: 18px
+ text-align: center
+ display: block
+ &::before
+  content: ''
+  border-left: 2px solid #000
+  height: 50%
+  position: absolute
+  left: 0
+  top: 25%
+  transform: translateX(-700%)
+.card__iten
+ position: relative
+ background-color: rgba(109, 49, 208, 0.5)
+ border-radius: 10px
+ color: rgba(255, 219, 128, 1)
+ font-size: 16px
+ width: 35%
+ height: 18px
+ text-align: center
+ display: block
 .swiper-slide__text p
  width: 520px
  height: 120px
@@ -45,6 +73,7 @@
 .image-slider
  height: 900px
  width: 100%
+ overflow: hidden
 .swiper-pagination
  bottom: 1
 .swiper-pagination-bullet
@@ -77,6 +106,7 @@
   margin-top: 23px
   cursor: pointer
 .swiper-text__black
+ padding-bottom: 30px
  h1
   color: rgba(67, 67, 100, 1)
  p
@@ -98,6 +128,7 @@
   display: flex
   justify-content: space-around
   gap: 40px
+  flex-wrap: wrap
   img
     border-radius: 10px
     width: 100%
