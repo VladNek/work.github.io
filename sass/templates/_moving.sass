@@ -1,0 +1,47 @@
+.section__img
+ display: flex
+ justify-content: space-between
+ text-align: center
+.section__text
+ width: 480px
+ h2
+  font-size: 40px
+  line-height: 29px
+  text-transform: uppercase
+  color: rgba(67, 67, 100, 1)
+ p
+  font-size: 16px
+  font-weight: 400
+  line-height: 24px
+  letter-spacing: 0.5px
+  text-align: center
+.moving-button
+ background: linear-gradient(96.1deg, #FFEB80 -22.07%, #FDBFA3 123.25%)
+
+.moving__img
+ position: relative
+ &::before
+   content: ''
+   position: absolute 
+   z-index: 1000 
+   width: 80px
+   bottom: 0
+   right: 0
+   opacity: 0.5 
+   height: 505px
+   background: white 
+.moving__image
+ position: relative
+ &::before
+   content: ''
+   position: absolute 
+   z-index: 1000 
+   width: 80px
+   bottom: 0
+   left: 0
+   opacity: 0.5 
+   height: 505px 
+   background: white 
+
+img
+ width: 100%
